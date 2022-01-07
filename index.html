@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"بحث...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="记录学习记录">
 <meta property="og:type" content="website">
 <meta property="og:title" content="唐鸭鸭的博客">
@@ -57,7 +57,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح" role="button">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
@@ -97,10 +97,10 @@
     <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          المحتويات
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          Overview
         </li>
       </ul>
 
@@ -120,7 +120,7 @@
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
           <span class="site-state-item-count">1</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
   </nav>
@@ -180,10 +180,10 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">نُشر في</span>
+      <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="أُنشأ: 2022-01-07 16:54:10 / عُدل: 20:09:28" itemprop="dateCreated datePublished" datetime="2022-01-07T16:54:10+08:00">2022-01-07</time>
+      <time title="Created: 2022-01-07 16:54:10 / Modified: 20:19:41" itemprop="dateCreated datePublished" datetime="2022-01-07T16:54:10+08:00">2022-01-07</time>
     </span>
 
   
@@ -207,7 +207,7 @@
 <li>第八步：完成部署，撰写文章</li>
 </ul>
 <h5 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h5><p>​        什么是Git ?简单来说Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用Git同步到GitHub上。从Git官网下载：&lt;<a href="https://link.zhihu.com/?target=https://git-scm.com/download/win">Git - Downloading Package</a>&gt;，选择64位安装即可，安装成功后应该需要配置环境变量，但有的教程没有要求，配置环境变量是将Git根目录配置在path环境当中。。。接下来就是绑定你的Git和Github，鼠标右击桌面打开，你会看到目录下会有Git Bash Here这个按键：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">！[<span class="string">图片</span>](<span class="link">https://s2.loli.net/2022/01/07/XpPdom2C8w4BTfe.jpg</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">img</span>](<span class="link">https://s2.loli.net/2022/01/07/XpPdom2C8w4BTfe.jpg</span>)</span><br></pre></td></tr></table></figure>
 
 <p>设置你的用户名user.name和用户邮箱user.email配置信息：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;你的GitHub用户名&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;你的GitHub注册邮箱&quot;</span></span><br></pre></td></tr></table></figure>
@@ -216,10 +216,10 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;你的GitHub注册邮箱&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>然后代码末尾会有一个“ ：”，这个时候狂按三下空格即可生成（手动狗头），然后去找到生成的.shh文件（这个文件怕找不到的话，在dos命令栏中会生成一个路径，直接复制粘贴那个路径到你的文件资源管理器）复制生成的密钥Ctrl A+C。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">baf39babcae569c81c770a6c0edb0b5.png</span>](<span class="link">https://s2.loli.net/2022/01/07/c1KupCayhr5EFYJ.png</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">img</span>](<span class="link">https://s2.loli.net/2022/01/07/nLuslc3kfNBWetw.png</span>)</span><br></pre></td></tr></table></figure>
 
 <p>接下来打开<a target="_blank" rel="noopener" href="https://github.com/settings/keys">https://github.com/settings/keys</a> ，新建new SSH Key</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">![<span class="string">9862a5f6a3bc318ea2460b718e4ca0f.png</span>](<span class="link">https://s2.loli.net/2022/01/07/uwBhEcQCbg9s23m.png</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">![<span class="string">img</span>](<span class="link">https://s2.loli.net/2022/01/07/WYmFCTcKl6yuLtG.png</span>)</span><br></pre></td></tr></table></figure>
 
 <p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去，最后点击Add SSH key。<br>在Git Bash中检测GitHub公钥设置是否成功，输入 <code> ssh git@github.com</code>  出现以下代码就是说明你的密钥配置成功</p>
 <p><code>Hi tangzhiwei798! You&#39;ve successfully authenticated, but GitHub does not provide shell access. Connection to github.com closed.</code> (我的名字可以省略)</p>
@@ -229,7 +229,7 @@
 <p><img src="https://pic2.zhimg.com/80/v2-bede250b8456df92475b455fda8c1dd9_1440w.jpg" alt="img"></p>
 <p> 看到这，安装hexo的“环境”已经搭建完成。</p>
 <h5 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h5><p>Hexo就是我们的个人博客网站的框架， 这里需要自己在电脑常里创建一个文件夹，可以命名为Blog，Hexo框架与以后你自己发布的网页都在这个文件夹中。创建好后，进入文件夹中，按住shift键，右击鼠标点击命令行，以图片所示：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">430476590943909523.jpg</span>](<span class="link">https://s2.loli.net/2022/01/07/9R3XlbmFzTMrksd.jpg</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">img</span>](<span class="link">https://s2.loli.net/2022/01/07/jHWq5pLrlShv6My.jpg</span>)</span><br></pre></td></tr></table></figure>
 
 <p>（就是我鼠标指的位置）</p>
 <p>使用npm命令安装Hexo，输入：</p>
@@ -282,7 +282,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">tangzhiwei</span>
 </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
     </div>
