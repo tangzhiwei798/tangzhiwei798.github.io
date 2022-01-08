@@ -189,7 +189,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">عُدل في</span>
-      <time title="عُدل: 2022-01-08 21:21:51" itemprop="dateModified" datetime="2022-01-08T21:21:51+08:00">2022-01-08</time>
+      <time title="عُدل: 2022-01-08 22:43:27" itemprop="dateModified" datetime="2022-01-08T22:43:27+08:00">2022-01-08</time>
     </span>
 
   
@@ -203,15 +203,20 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="hexo博客搭建的使用和安装教程"><a href="#hexo博客搭建的使用和安装教程" class="headerlink" title="hexo博客搭建的使用和安装教程"></a>hexo博客搭建的使用和安装教程</h1><h2 id="话不多说，直接开干。"><a href="#话不多说，直接开干。" class="headerlink" title="话不多说，直接开干。"></a>话不多说，直接开干。</h2><h4 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h4><ul>
-<li>第一步：下载git</li>
-<li>第二步：下载node.js</li>
-<li>第三步： 下载hexo</li>
-<li>第四步：GitHub创建个人仓库</li>
-<li>第五步：生成SSH添加到GitHub</li>
-<li>第六步：将hexo部署到GitHub</li>
-<li>第七步：购买自己的域名</li>
-<li>第八步：完成部署，撰写文章</li>
+<li>第一步：注册Github账号，new存储库</li>
+<li>第二步：安装git</li>
+<li>第三步：安装node.js</li>
+<li>第四步：安装hexo</li>
+<li>第五步：部署网站到Github</li>
+<li>第六步：购买自己的域名</li>
+<li>第七步：绑定域名</li>
+<li>第八步：更换主题</li>
 </ul>
+<h5 id="注册Github账号，new存储库"><a href="#注册Github账号，new存储库" class="headerlink" title="注册Github账号，new存储库"></a>注册Github账号，new存储库</h5><p>第一步就是得要拥有一个github账号，去官网按步骤注册即可<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a> ，点击GitHub中的New repository创建新仓库，仓库名应该为：<strong>用户名</strong>.<a href="https://link.zhihu.com/?target=http://github.io">http://github.io</a> 这个<strong>用户名</strong>使用你的GitHub帐号名称代替，这是固定写法，比如我的仓库名为：</p>
+<p><img src="https://s4.ax1x.com/2022/01/08/7inzh8.png" alt="img"></p>
+<p>新建一个你的存储库</p>
+<p><img src="https://s4.ax1x.com/2022/01/08/7iu4Ds.png" alt="img"></p>
+<p>点击Create repository生成。</p>
 <h5 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h5><p>​        什么是Git ?简单来说Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用Git同步到GitHub上。从Git官网下载：&lt;<a href="https://link.zhihu.com/?target=https://git-scm.com/download/win">Git - Downloading Package</a>&gt;，选择64位安装即可，安装成功后应该需要配置环境变量，但有的教程没有要求，配置环境变量是将Git根目录配置在path环境当中。。。接下来就是绑定你的Git和Github，鼠标右击桌面打开，你会看到目录下会有Git Bash Here这个按键：</p>
 <img src="https://s4.ax1x.com/2022/01/08/7ieGAf.jpg" alt="img" style="zoom:25%;" />
 
@@ -257,7 +262,39 @@
 <p>命令简写<br>hexo n “我的博客” == hexo new “我的博客” #新建文章<br>hexo g == hexo generate #生成<br>hexo s == hexo server #启动服务预览<br>hexo d == hexo deploy #部署</p>
 <p>hexo server #Hexo会监视文件变动并自动更新，无须重启服务器<br>hexo server -s #静态模式<br>hexo server -p 5000 #更改端口<br>hexo server -i 192.168.1.1 #自定义 IP<br>hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</p>
 <p>刚刚的三个命令依次是新建一篇博客文章、生成网页、在本地预览的操作。</p>
-<h5 id="GitHub创建个人仓库"><a href="#GitHub创建个人仓库" class="headerlink" title="GitHub创建个人仓库"></a>GitHub创建个人仓库</h5><p>第一步就是得要拥有一个github账号，去官网按步骤注册即可<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a> </p>
+<h5 id="部署网站到Github"><a href="#部署网站到Github" class="headerlink" title="部署网站到Github"></a>部署网站到Github</h5><p>刚刚生成的网页只能在本地运行查看，我们需要的是能够让别人在他的设备上看见我们的网站，我们接下来需要做的是将hexo与Github关联起来打开刚刚建立的blog文件夹，找到_config.yml，打开这个文件(我用的是Visual Studio Code)。</p>
+<img src="https://s4.ax1x.com/2022/01/08/7iloyF.png" alt="img" style="zoom: 50%;" />
+
+<p>这里打开的是<strong>站点文件</strong>，不要与主题文件混淆了。打开后，拉到最下面，修改为：</p>
+<p>deploy:<br>type: git<br>repo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git<br>branch: main（我这里用到的是主分支，还有个master，都可以，在GitHub上改动需要一致）</p>
+<p><img src="https://s4.ax1x.com/2022/01/08/7i3PjU.png" alt="img"></p>
+<p>Ctrl + S 保存站点配置文件。最后安装Git部署插件，同样也是在blog文件夹中进行，输入命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>接下来输入三条命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>hexo d 部署完成后，浏览器打开你的GitHub存储器路径地址，即 <a href="https://link.zhihu.com/?target=http://xxxx.github.io">http://xxxx.github.io</a> ，你会发现你的博客已经上线了，可以在网络中被访问了。</p>
+<h5 id="购买自己的域名"><a href="#购买自己的域名" class="headerlink" title="购买自己的域名"></a>购买自己的域名</h5><p>我这里是在阿里云上面购买的域名，top后缀的花了我9块钱，如果你还想要个性化的域名，你可以加钱。</p>
+<p><a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/domain/">https://wanwang.aliyun.com/domain/</a> ,购买域名后，需要第一时间提交你的个人信息，去进行实名认证，本人第一次搞不知道，在完成部署后，硬是等了我好多天，你应该能理解我那急切的心情。</p>
+<h5 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h5><p>现在网页可以被访问了，但是既然网站都已经做出来了，为何不搞一个真正属于自己的域名，个性化域名才yyds，找到域名管理，域名解析那个位置<img src="https://s4.ax1x.com/2022/01/08/7iGIhR.png" alt="img"></p>
+<p>添加解析<img src="https://s4.ax1x.com/2022/01/08/7iJCgP.png" alt="img" style="zoom: 50%;" /></p>
+<p>照着上面配应该没问题（第三条写你自己的github存储器路径），然后回到你的Github，进入之前建立的仓库</p>
+<img src="https://s4.ax1x.com/2022/01/08/7iJWxP.png" alt="img" style="zoom: 50%;" />
+
+<p>点击save保存。第三步，进入本地博客文件夹 ，进入blog/source目录下，创建一个记事本文件，输入你的域名，对，只要写进你自己的域名即可。如果带有www，那么以后访问的时候必须带有www完整的域名才可以访问。写完后，将文件后缀改成CNAME(之前域名解析时用到的记录类型)注意保存成<strong>所有文件</strong>而不是<strong>txt文件</strong>。</p>
+<p>完成这三步，进入blog目录中，按住shift键右击打开命令行，依次输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>完成后，你的博客从此刻开始，就在你的个性化域名中就可以访问了。</p>
+<h5 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h5><p>如果你不喜欢Hexo默认的主题，可以更换不同的主题，主题传送门：<a href="https://link.zhihu.com/?target=https://hexo.io/themes/">Themes</a> 我自己使用的是Next主题，可以在blog目录中的themes文件夹中查看你自己主题是什么。现在把默认主题更改成Next主题，在blog目录中（就是命令行的位置处于blog目录）打开命令行输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<p>这是将Next主题下载到blog目录的themes主题下的next文件夹中。打开<strong>站点</strong>的_config.yml配置文件，修改主题为next</p>
+<p><img src="https://pic1.zhimg.com/80/v2-b1997377e82408cb15b485c65ae00f70_1440w.jpg" alt="img"></p>
+<p>打开<strong>主题</strong>的_config.yml配置文件，不是站点主题文件，找到Scheme Settings</p>
+<p><img src="https://pic2.zhimg.com/80/v2-1ac152c4aabe4c10b762ee27552f1105_1440w.jpg" alt="img"></p>
+<p>next主题有三个样式，我用的是Pisces，你们可以自己试试看，选择你自己喜欢的样式（只需要把行首的#去除，#是注释），选择好后，再次部署网站，hexo g、hexo d，查看效果。选择其他主题，按照上述过程即可实现。</p>
 
       
     </div>
